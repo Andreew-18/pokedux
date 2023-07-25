@@ -17,7 +17,6 @@ export const fetchPokemonsWithDetails = createAsyncThunk(
                 pokemonsRes.map(pokemon => getPokemonDetails(pokemon))
             );
      dispatch(setPokemons(pokemonsDetailed)); 
-     console.log(pokemonsDetailed);
      dispatch(setLoading(false));
 
     }
@@ -51,5 +50,4 @@ export const dataSlice = createSlice({
 });
 
 export const {setFavorite, setPokemons, setFilter} = dataSlice.actions;
-console.log(dataSlice);
 export default dataSlice.reducer;
